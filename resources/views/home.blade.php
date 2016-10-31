@@ -8,7 +8,9 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    You are logged in!<br>
+                    <a class="btn btn-danger btn-sm" href="{{url('/',['register'])}}?ref={{encrypt($user->id)}}" target="_blank">reference link</a><br>
+                    Uplevel: {{$uplevel->name}}
                 </div>
             </div>
         </div>
