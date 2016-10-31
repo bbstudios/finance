@@ -67,8 +67,16 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
-        $user->uplevel = $data['uplevel'];
+        $user->uplevel = isset($data['uplevel'])?$data['uplevel']:1;
         $user->save();
+        $up = User::find($user->uplevel);
+
+        if(is_null($up->firstdownlevel)){
+            $up->firstdownlevel = $user->id;
+            $up->save();
+        }
+
+
         return $user;
     }
 }

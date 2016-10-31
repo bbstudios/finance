@@ -30,4 +30,16 @@ class User extends Authenticatable
     public function uplevel(){
         return User::find($this->uplevel);
     }
+
+    public function downlevels(){
+        return $this->hasMany('App\User','uplevel');
+    }
+
+    public function fistdownlevel(){
+        return User::find($this->firstdownlevel);
+    }
+
+    public function equal(User $user){
+        return $this->id==$user->id?true:false;
+    }
 }

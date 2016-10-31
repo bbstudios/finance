@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 //Route::get('/r/{id}','Auth\RegisterController@showRegistrationForm');
+
+Route::post('earn','HomeController@distribution');
