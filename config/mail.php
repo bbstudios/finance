@@ -18,6 +18,7 @@ return [
 
     'driver' => env('MAIL_DRIVER', 'smtp'),
 
+
     /*
     |--------------------------------------------------------------------------
     | SMTP Host Address
@@ -56,8 +57,8 @@ return [
     */
 
     'from' => [
-        'address' => 'hello@example.com',
-        'name' => 'Example',
+        'address' => 'support@extremepc.co.nz',
+        'name' => 'Finance Company',
     ],
 
     /*

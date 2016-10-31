@@ -20,6 +20,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->integer('uplevel')->default(0);
+            $table->integer('firstdownlevel')->nullable();
+            $table->integer('email_status')->default(0);//0:unverified 1:verified
+
         });
     }
 
